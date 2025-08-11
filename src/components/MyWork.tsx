@@ -48,7 +48,7 @@ const imageUrl = customImages[index - 1] || customImages[0];
         </div>
 
         {/* Videos Section */}
-       {/* Videos Section */}
+{/* Videos Section */}
 <div className="mb-20">
   <div className="text-center mb-12">
     <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-black uppercase">
@@ -103,6 +103,16 @@ const imageUrl = customImages[index - 1] || customImages[0];
   </div>
 </div>
 
+
+        {/* YouTube Channel Section */}
+        <div className="text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-black uppercase mb-6">
+            FIND ME ON YOUTUBE
+          </h2>
+          
+          <p className="text-base lg:text-lg text-black/80 mb-8 max-w-2xl mx-auto">
+            I post weekly content on filmmaking, creativity, and student life.
+          </p>
           
           {/* YouTube Channel Info */}
           <div className="flex flex-col items-center mb-8">
