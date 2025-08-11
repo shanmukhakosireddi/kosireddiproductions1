@@ -17,15 +17,17 @@ const MyWork = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {[1, 2, 3, 4].map((index) => {
               // Use your custom image for first item, Pexels for others
-              const imageUrl = index === 1 
-                ? 'https://i.postimg.cc/MGRn4BWj/burntcolor-mov-01-00-31-00-Still002.jpg'
-                : `https://images.pexels.com/photos/${
-                    index === 2 ? 'https://i.postimg.cc/MGRn4BWj/burntcolor-mov-01-00-31-00-Still002.jpg' : 
-                    index === 3 ? '3184465' : '3184339'
-                  }/pexels-photo-${
-                    index === 2 ? '3184418' : 
-                    index === 3 ? '3184465' : '3184339'
-                  }.jpeg?auto=compress&cs=tinysrgb&w=800`;
+              // Array of your own image URLs in order
+const customImages = [
+  "https://i.postimg.cc/MGRn4BWj/burntcolor-mov-01-00-31-00-Still002.jpg", // Image 1
+  "https://your-second-image-url.com", // Image 2
+  "https://your-third-image-url.com",  // Image 3
+  "https://your-fourth-image-url.com"  // Image 4
+];
+
+// Select image based on index
+const imageUrl = customImages[index - 1] || customImages[0]; 
+
               
               return (
               <div
