@@ -16,7 +16,7 @@ const MyWork = () => {
         <div className="mb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {[1, 2, 3, 4].map((index) => {
-              // Use custom image for first item, Pexels for others
+              // Use your custom image for first item, Pexels for others
               const imageUrl = index === 1 
                 ? 'https://i.postimg.cc/MGRn4BWj/burntcolor-mov-01-00-31-00-Still002.jpg'
                 : `https://images.pexels.com/photos/${
