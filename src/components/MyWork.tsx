@@ -22,7 +22,7 @@ const customImages = [
   "https://i.postimg.cc/MGRn4BWj/burntcolor-mov-01-00-31-00-Still002.jpg", // Image 1
   "https://i.postimg.cc/B642Bpxv/Whats-App-Image-2025-08-11-at-10-53-14-4b1d561e.jpg", // Image 2
   "https://i.postimg.cc/d0BhwYyq/Whats-App-Image-2025-08-11-at-10-51-08-d34a2a6c.jpg",  // Image 3
-  "https://your-fourth-image-url.com"  // Image 4
+  "https://i.postimg.cc/Jn3V9rDq/websiteimage.jpg"  // Image 4
 ];
 
 // Select image based on index
