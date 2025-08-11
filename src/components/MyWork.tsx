@@ -12,40 +12,35 @@ const MyWork = () => {
           </h1>
         </div>
 
-        {/* Photo Grid Section */}
-        <div className="mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {[1, 2, 3, 4].map((index) => {
-              // Use your custom image for first item, Pexels for others
-              // Array of your own image URLs in order
-const customImages = [
-  "https://i.postimg.cc/MGRn4BWj/burntcolor-mov-01-00-31-00-Still002.jpg", // Image 1
-  "https://i.postimg.cc/B642Bpxv/Whats-App-Image-2025-08-11-at-10-53-14-4b1d561e.jpg", // Image 2
-  "https://your-third-image-url.com",  // Image 3
-  "https://your-fourth-image-url.com"  // Image 4
-];
+      </div>
 
-// Select image based on index
-const imageUrl = customImages[index - 1] || customImages[0]; 
+{/* Photo Grid Section */}
+<div className="mb-16 sm:mb-20">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+    {[
+      "https://i.postimg.cc/MGRn4BWj/burntcolor-mov-01-00-31-00-Still002.jpg", // Image 1
+      "https://i.postimg.cc/B642Bpxv/Whats-App-Image-2025-08-11-at-10-53-14-4b1d561e.jpg", // Image 2
+      "https://i.postimg.cc/d0BhwYyq/Whats-App-Image-2025-08-11-at-10-51-08-d34a2a6c.jpg",  // Image 3
+      "https://i.postimg.cc/Jn3V9rDq/websiteimage.jpg"  // Image 4
+    ].map((imageUrl, index) => (
+      <div
+        key={index}
+        className="aspect-square bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group relative touch-manipulation"
+      >
+        {/* Hover background overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/10 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-lg"></div>
+        
+        {/* Image */}
+        <img
+          src={imageUrl}
+          alt={`Work sample ${index + 1}`}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0"
+        />
+      </div>
+    ))}
+  </div>
+</div>
 
-              
-              return (
-              <div
-                key={index}
-                className="aspect-square bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group relative"
-              >
-                {/* Hover background overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-black/10 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-lg"></div>
-                <img
-                  src={imageUrl}
-                  alt={`Work sample ${index}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0"
-                />
-              </div>
-              );
-            })}
-          </div>
-        </div>
 
         {/* Videos Section */}
 {/* Videos Section */}
