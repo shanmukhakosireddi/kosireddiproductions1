@@ -18,7 +18,7 @@ const MyWork = () => {
             {[1, 2, 3, 4].map((index) => {
               // Use custom image for first item, Pexels for others
               const imageUrl = index === 1 
-                ? 'https://photos.fife.usercontent.google.com/pw/AP1GczMvgpbZu5wXpnCyiyMjngNg9VlWX68JSt7ND8lpy60OI5G2Br5eRy9e5A=w1216-h913-s-no-gm?authuser=0'
+                ? 'https://bolt.new/api/upload/files%2F4257027-1754891060772-burntcolor.mov.01_00_31_00.Still002.jpg'
                 : `https://images.pexels.com/photos/${
                     index === 2 ? '3184418' : 
                     index === 3 ? '3184465' : '3184339'
