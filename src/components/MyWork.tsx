@@ -18,7 +18,7 @@ const MyWork = () => {
             {[1, 2, 3, 4].map((index) => {
               // Use custom images for first two items, Pexels for others
               const imageUrl = index === 1 
-                ? '/Screenshot 2025-08-06 232725.png'
+                ? 'https://photos.fife.usercontent.google.com/pw/AP1GczMvgpbZu5wXpnCyiyMjngNg9VlWX68JSt7ND8lpy60OI5G2Br5eRy9e5A=w1216-h913-s-no-gm?authuser=0'
                 : index === 2
                 ? 'https://photos.fife.usercontent.google.com/pw/AP1GczMvgpbZu5wXpnCyiyMjngNg9VlWX68JSt7ND8lpy60OI5G2Br5eRy9e5A=w1216-h913-s-no-gm?authuser=0'
                 : `https://images.pexels.com/photos/${
