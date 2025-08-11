@@ -59,28 +59,50 @@ const imageUrl = customImages[index - 1] || customImages[0];
 
   <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
     {[
-      { id: "NSUw4cPtLJ4" },
-      { id: "JlTWD9jh9as" },
-      { id: "ACrOQ3WkOdo" },
-      { id: "1DgAEc9206c" }
+      {
+        thumbnail: "https://img.youtube.com/vi/NSUw4cPtLJ4/hqdefault.jpg",
+        link: "https://www.youtube.com/watch?v=NSUw4cPtLJ4"
+      },
+      {
+        thumbnail: "https://img.youtube.com/vi/JlTWD9jh9as/hqdefault.jpg",
+        link: "https://www.youtube.com/watch?v=JlTWD9jh9as"
+      },
+      {
+        thumbnail: "https://img.youtube.com/vi/ACrOQ3WkOdo/hqdefault.jpg",
+        link: "https://www.youtube.com/watch?v=ACrOQ3WkOdo"
+      },
+      {
+        thumbnail: "https://img.youtube.com/vi/1DgAEc9206c/hqdefault.jpg",
+        link: "https://www.youtube.com/watch?v=1DgAEc9206c"
+      }
     ].map((video, index) => (
-      <div
+      <a
         key={index}
+        href={video.link}
+        target="_blank"
+        rel="noopener noreferrer"
         className="aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group relative"
       >
-        <iframe
-          src={`https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&loop=1&playlist=${video.id}&controls=0&modestbranding=1&rel=0`}
-          title={`YouTube video player ${index + 1}`}
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          className="w-full h-full"
-        ></iframe>
-      </div>
+        {/* Hover background overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/10 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-lg"></div>
+
+        {/* Video Thumbnail */}
+        <img
+          src={video.thumbnail}
+          alt={`Video thumbnail ${index + 1}`}
+          className="w-full h-full object-cover relative z-0"
+        />
+
+        {/* Play Button Overlay */}
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-all duration-300 z-20">
+          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative z-30">
+            <Play className="w-6 h-6 text-black ml-1" fill="currentColor" />
+          </div>
+        </div>
+      </a>
     ))}
   </div>
 </div>
-
 
         {/* YouTube Channel Section */}
         <div className="text-center">
