@@ -18,7 +18,7 @@ const MyWork = () => {
             {[1, 2, 3, 4].map((index) => {
               // Use custom image for first item, Pexels for others
               const imageUrl = index === 1 
-                ? 'https://photos.google.com/photo/AF1QipPDIJ-auTn4K4uLX8c34ty092ye5HYOkS4DAenv'
+                ? 'https://photos.fife.usercontent.google.com/pw/AP1GczMvgpbZu5wXpnCyiyMjngNg9VlWX68JSt7ND8lpy60OI5G2Br5eRy9e5A=w1216-h913-s-no-gm?authuser=0'
                 : `https://images.pexels.com/photos/${
                     index === 2 ? '3184418' : 
                     index === 3 ? '3184465' : '3184339'
