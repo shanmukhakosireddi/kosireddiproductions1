@@ -20,7 +20,7 @@ const MyWork = () => {
               // Array of your own image URLs in order
 const customImages = [
   "https://i.postimg.cc/MGRn4BWj/burntcolor-mov-01-00-31-00-Still002.jpg", // Image 1
-  "https://your-second-image-url.com", // Image 2
+  "https://i.postimg.cc/MGRn4BWj/burntcolor-mov-01-00-31-00-Still002.jpg", // Image 2
   "https://your-third-image-url.com",  // Image 3
   "https://your-fourth-image-url.com"  // Image 4
 ];
