@@ -15,7 +15,19 @@ const MyWork = () => {
         {/* Photo Grid Section */}
         <div className="mb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {[1, 2, 3, 4].map((index) => (
+            {[1, 2, 3, 4].map((index) => {
+              // Use custom image for first item, Pexels for others
+              const imageUrl = index === 1 
+                ? 'https://bolt.new/api/upload/files%2F4257027-1754890206583-burntcolor.mov.01_00_31_00.Still002.jpg'
+                : `https://images.pexels.com/photos/${
+                    index === 2 ? '3184418' : 
+                    index === 3 ? '3184465' : '3184339'
+                  }/pexels-photo-${
+                    index === 2 ? '3184418' : 
+                    index === 3 ? '3184465' : '3184339'
+                  }.jpeg?auto=compress&cs=tinysrgb&w=800`;
+              
+              return (
               <div
                 key={index}
                 className="aspect-square bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group relative"
@@ -23,20 +35,13 @@ const MyWork = () => {
                 {/* Hover background overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-black/10 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 rounded-lg"></div>
                 <img
-                  src={`https://images.pexels.com/photos/${
-                    index === 1 ? '3585047' : 
-                    index === 2 ? '3184418' : 
-                    index === 3 ? '3184465' : '3184339'
-                  }/pexels-photo-${
-                    index === 1 ? '3585047' : 
-                    index === 2 ? '3184418' : 
-                    index === 3 ? '3184465' : '3184339'
-                  }.jpeg?auto=compress&cs=tinysrgb&w=800`}
+                  src={imageUrl}
                   alt={`Work sample ${index}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-0"
                 />
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
