@@ -135,7 +135,6 @@ const MyWork = () => {
             <span className="uppercase tracking-wide">Subscribe</span>
           </a>
         </div>
-      </div>
     </section>
   );
 };
