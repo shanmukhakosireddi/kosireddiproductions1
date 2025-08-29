@@ -146,20 +146,6 @@ const Services = () => {
       </div>
     </section>
   );
-  {
-  id: 'editing1',
-  title: 'Editing 1',
-  price: '₹149',
-  features: [
-    'Only Reels (Less than 1 min)',
-    'Color Grading',
-    'Text Animation & Effects (Based on Video)',
-    '2 Revisions'
-  ],
-  subtext: '⚡ Perfect for Instagram Reels & YouTube Shorts',
-  idealFor: '🎯 Ideal for: Social Media Creators',
-}
-
 };
 
 export default Services;
