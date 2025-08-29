@@ -54,7 +54,6 @@ const Services = () => {
       subtext: '🎬 Ideal for: Vlogs, Interviews, Client Work',
       idealFor: '',
       accentColor: 'bg-purple-100 text-purple-800'
-    }
     },
     {
       id: 'editing1',
