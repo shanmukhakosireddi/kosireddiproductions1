@@ -64,7 +64,16 @@ const Services = () => {
         'Only Reels (Less than 1 min)',
         'Color Grading',
         'Text Animation & Effects (Based on Video)',
-        '2 Revisions'
+        '2 Revisions',
+        <a
+          key="youtube-link"
+          href="https://www.youtube.com/@StartOverVibe"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black font-medium hover:text-black/70 transition-colors duration-300"
+        >
+          YouTube Channel
+        </a>
       ],
       subtext: '⚡ Perfect for Instagram Reels & YouTube Shorts',
       idealFor: '🎯 Ideal for: Social Media Creators',
@@ -138,9 +147,13 @@ const Services = () => {
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-black flex items-center justify-center">
                       <Check className="w-3 h-3 text-[#fdf6ee]" />
                     </div>
-                    <span className="text-black font-medium">
-                      {feature}
-                    </span>
+                    {typeof feature === 'string' ? (
+                      <span className="text-black font-medium">
+                        {feature}
+                      </span>
+                    ) : (
+                      feature
+                    )}
                   </div>
                 ))}
               </div>
