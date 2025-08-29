@@ -158,9 +158,14 @@ const Services = () => {
               </div>
 
               {/* CTA Button */}
-              <button className="w-full bg-black text-[#f8f2ea] font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:bg-black/90 hover:scale-105 active:scale-95 uppercase tracking-wide text-sm">
+              <a
+                href="https://example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-black text-[#f8f2ea] font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:bg-black/90 hover:scale-105 active:scale-95 uppercase tracking-wide text-sm text-center"
+              >
                 Book Now
-              </button>
+              </a>
             </div>
           ))}
         </div>
